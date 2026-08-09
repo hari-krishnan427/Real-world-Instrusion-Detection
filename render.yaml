@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: real-world-intrusion-detection
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --chdir backend app:app
