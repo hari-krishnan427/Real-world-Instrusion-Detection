@@ -1,6 +1,12 @@
-# 📡 Real-World Network Intrusion Detection System (IDS)
+# 📡 Nighthawk IDS — Real-World Network Intrusion Detection System
 
-An active, real-time **Network Intrusion Detection & Prevention System (NIDPS)** built with **Python**, **Scapy**, **Flask**, and **Windows Firewall Automation**. Features live packet inspection, automated threat mitigation, firewall IP blocking, and an interactive web monitoring dashboard.
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-Vercel-black?style=for-the-badge&logo=vercel)](https://real-world-intrusion-detection.vercel.app)
+[![Python](https://img.shields.io/badge/Python-Flask-3776AB?style=for-the-badge&logo=python)](https://flask.palletsprojects.com)
+[![Scapy](https://img.shields.io/badge/Network-Scapy-red?style=for-the-badge)](https://scapy.net)
+
+An active, real-time **Network Intrusion Detection & Prevention System (NIDPS)** featuring live packet inspection, automated threat mitigation, host tracking, firewall rule injection, and an interactive cybersecurity matrix dashboard.
+
+🔗 **Live Web Dashboard:** [https://real-world-intrusion-detection.vercel.app](https://real-world-intrusion-detection.vercel.app)
 
 ---
 
@@ -12,6 +18,7 @@ Real-world-Intrusion-Detection/
 │   └── app.py                      # Multi-threaded packet sniffer, detection rules & firewall blocker
 ├── templates/                      # Monitoring Dashboard UI
 │   └── index.html                  # Real-time threat matrix & live network feed
+├── vercel.json                     # Vercel Deployment Config
 ├── requirements.txt                # Dependencies (Flask, Scapy, etc.)
 ├── .gitignore
 └── README.md
@@ -21,32 +28,25 @@ Real-world-Intrusion-Detection/
 
 ## 🛠️ Key Capabilities
 
-- **Real-Time Packet Inspection**: Sniffs TCP, UDP, ICMP, ARP, and Ether packets asynchronously.
-- **Automated Threat Detection Engine**:
+- ⚡ **Real-Time Packet Inspection**: Sniffs TCP, UDP, ICMP, ARP, and Ether packets asynchronously.
+- 🎯 **Automated Threat Engine**:
   - **Port Scanning**: Detects SYN scans and NULL/FIN stealth scans.
   - **DoS & Flooding**: Detects SYN flooding and ICMP ping sweeps exceeding defined packet thresholds.
-- **Automated Active Defense**: Automatically injects Windows Firewall rules (`netsh advfirewall`) to block malicious attacker IPs instantly.
-- **Interactive Security Dashboard**: Live updating matrix of active threats, IP block lists, and network devices.
+- 🛡️ **Automated Active Defense**: Automatically injects firewall rules to block malicious attacker IPs instantly.
+- 📊 **Cybersecurity Dashboard**: Interactive matrix displaying threat distribution, local network nodes, traffic anomalies, and active IP blocklists.
 
 ---
 
 ## 🚀 Setup & Execution
 
-### 1. Prerequisites
-- Python 3.9+
-- Npcap (on Windows) or libpcap (on Linux) for Scapy raw packet sniffing.
-- Administrative / Root privileges (required for packet capturing and firewall manipulation).
+### 1. Live Cloud Web Dashboard
+Visit the live dashboard on Vercel: [https://real-world-intrusion-detection.vercel.app](https://real-world-intrusion-detection.vercel.app)
 
-### 2. Installation & Running
-
-Navigate to the project root and install requirements:
+### 2. Local Real-Time Packet Sniffing Mode
 ```bash
+git clone https://github.com/hari-krishnan427/Real-world-Intrusion-Detection.git
+cd Real-world-Intrusion-Detection
 pip install -r requirements.txt
-```
-
-Launch the NIDS engine with administrative privileges:
-```bash
 python backend/app.py
 ```
-
-Access the Live Dashboard at `http://localhost:5000`.
+Access the local monitoring dashboard at `http://localhost:5000`.
